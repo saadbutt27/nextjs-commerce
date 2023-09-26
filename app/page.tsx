@@ -1,9 +1,10 @@
-import { Carousel } from 'components/carousel';
+import { Carousel as Carousel2 } from 'components/carousel';
+import Carousel from 'components/grid/Carousel';
 import { ThreeItemGrid } from 'components/grid/three-items';
 import Footer from 'components/layout/footer';
 import { Suspense } from 'react';
 
-export const runtime = 'edge';
+// export const runtime = 'edge';
 
 export const metadata = {
   description: 'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
@@ -15,9 +16,10 @@ export const metadata = {
 export default async function HomePage() {
   return (
     <>
+      <Carousel />
       <ThreeItemGrid />
+      <Carousel2 />
       <Suspense>
-        <Carousel />
         <Suspense>
           <Footer />
         </Suspense>
